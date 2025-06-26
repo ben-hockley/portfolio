@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben Hockley - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwjfabSpFSBqfZrMp9Aw4X_0XFDa0njXU&libraries=maps,marker"
+    defer
+></script>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen font-sans text-gray-800">
     <header class="bg-white shadow-lg rounded-lg mx-4 mt-6 p-8 text-center">
@@ -34,7 +39,7 @@
                 that provides an exceptional user experience.
             </p>
             <p class="text-gray-700 mb-6 leading-relaxed">
-                When I'm not coding, you can find me enjoying the outdoors, listening to music
+                When I'm not coding, I enjoy hiking, going to live music events,
                 and playing American Football.
             </p>
             <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 bg-blue-50 p-4 rounded-r-lg">
@@ -49,46 +54,47 @@
                 <div>
                     <h4 class="text-lg font-semibold text-gray-800 mb-3">Programming Languages</h4>
                     <ul class="space-y-2">
-                        <li class="flex justify-between"><span><strong>JavaScript</strong></span> <span class="text-green-600 font-medium">Advanced</span></li>
-                        <li class="flex justify-between"><span><strong>Python</strong></span> <span class="text-green-600 font-medium">Advanced</span></li>
-                        <li class="flex justify-between"><span><strong>Java</strong></span> <span class="text-green-600 font-medium">Advanced</span></li>
-                        <li class="flex justify-between"><span><strong>Kotlin</strong></span> <span class="text-yellow-600 font-medium">Intermediate</span></li>
+                        <li class="flex justify-between"><span><strong>JavaScript</strong> <i class="fa-brands fa-js"></i> </span> <span class="text-green-600 font-medium">Advanced</span></li>
+                        <li class="flex justify-between"><span><strong>Python</strong> <i class="fa-brands fa-python"></i> </span> <span class="text-green-600 font-medium">Advanced</span></li>
+                        <li class="flex justify-between"><span><strong>Java</strong> <i class="fa-brands fa-java"></i> </span> <span class="text-green-600 font-medium">Advanced</span></li>
+                        <li class="flex justify-between"><span><strong>Kotlin</strong> <i class="fa-brands fa-android"></i> </span> <span class="text-yellow-600 font-medium">Intermediate</span></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold text-gray-800 mb-3">Frontend Technologies</h4>
                     <ul class="space-y-1 text-gray-700">
-                        <li>• HTML5 & CSS3</li>
-                        <li>• React.js</li>
+                        <li>• HTML5 <i class="fa-brands fa-html5"></i> & CSS3 <i class="fa-brands fa-css3-alt"></i></li>
+                        <li>• React.js <i class="fa-brands fa-react"></i></li>
                         <li>• JQuery</li>
-                        <li>• Bootstrap</li>
+                        <li>• Bootstrap <i class="fa-brands fa-bootstrap"></i></li>
                         <li>• Tailwind.css</li>
                         <li>• Jinja</li>
+                        <li>• Font Awesome <i class="fa-solid fa-font-awesome"></i></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold text-gray-800 mb-3">Backend Technologies and Frameworks</h4>
                     <ul class="space-y-1 text-gray-700">
-                        <li>• Flask</li>
+                        <li>• Flask <i class="fa-solid fa-pepper-hot"></i></li>
                         <li>• FastAPI</li>
                         <li>• JSON</li>
                         <li>• RESTful APIs</li>
-                        <li>• SpringBoot</li>
-                        <li>• Spring Security</li>
+                        <li>• SpringBoot <i class="fa-solid fa-leaf"></i></li>
+                        <li>• Spring Security <i class="fa-solid fa-lock"></i></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold text-gray-800 mb-3">Databases & Version Control</h4>
                     <ul class="space-y-1 text-gray-700">
-                        <li>• MySQL / MariaDB</li>
+                        <li>• MySQL / MariaDB <i class="fa-solid fa-database"></i></li>
                         <li>• SQLlite</li>
-                        <li>• GitHub</li>
-                        <li>• GitLab</li>
+                        <li>• GitHub <i class="fa-brands fa-github"></i></li>
+                        <li>• GitLab <i class="fa-brands fa-gitlab"></i></li>
                         <li>• GitHub Actions</li>
-                        <li>• Jenkins</li>
+                        <li>• Jenkins <i class="fa-brands fa-jenkins"></i></li>
                     </ul>
                 </div>
             </div>
@@ -257,6 +263,17 @@
                                 <strong class="mr-2">Location:</strong> 
                                 <span class="text-gray-700">Cardiff, UK</span>
                             </p>
+                            <gmp-map
+                                center="51.498258,-3.5943816"
+                                zoom="4"
+                                map-id="DEMO_MAP_ID"
+                                style="height: 400px"
+                                >
+                                <gmp-advanced-marker
+                                    position="51.488857, -3.178333"
+                                    title="Cardiff, UK"
+                                ></gmp-advanced-marker>
+                                </gmp-map>
                         </div>
                     </address>
 
