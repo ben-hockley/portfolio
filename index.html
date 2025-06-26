@@ -5,61 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben Hockley - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-in-out',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Smooth scrolling for the entire page */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation bar transition styles */
-        .nav-collapsed {
-            opacity: 0.4;
-            padding: 0.75rem 0 !important;
-        }
-
-        .nav-expanded {
-            opacity: 1;
-            padding: 1.25rem 0 !important;
-        }
-
-        .nav-transition {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Enhanced hover effect for navigation */
-        .nav-hover {
-            opacity: 1 !important;
-            padding: 1.25rem 0 !important;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-        }
-    </style>
+    <script src="static/JS/tailwind_config.js"></script>
+    <link rel="stylesheet" href="static/CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwjfabSpFSBqfZrMp9Aw4X_0XFDa0njXU&libraries=maps,marker"
@@ -272,155 +219,164 @@
                 <h3 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-green-900 bg-clip-text text-transparent mb-8">Featured Projects</h3>
 
                 <div class="space-y-8">
-                    <article class="group relative bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-blue-300 overflow-hidden">
+                    <article class="group project-panel relative bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 rounded-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-blue-300 overflow-hidden cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="relative z-10">
+                        <div class="relative z-10 project-content">
                             <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                                 <span class="mr-3 text-3xl animate-float">🩺</span> 
                                 <span class="bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
                                     Client Project For Digital Health and Care Wales
                                 </span>
                             </h4>
-                            <div class="mb-4">
-                                <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SpringBoot</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Spring Security</span>
-                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Gradle</span>
-                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Bootstrap</span>
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</span>
-                                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Chart.js</span>
-                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">SQL</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 mb-6 leading-relaxed text-lg">
-                                Employee/Candidate management System for Digital Health and Care Wales, Developed
-                                during a 4 week group client project at the National Software Academy, Cardiff University 
-                                in collaboration with Akshay Karsan, Tiago Moico and Saif Abuzinada
-                            </p>
-                            <div class="mb-6">
-                                <p class="font-bold text-gray-800 mb-3 text-lg">Key Features:</p>
-                                <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
-                                    <li class="flex items-center bg-blue-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                                        User registration and authentication
-                                    </li>
-                                    <li class="flex items-center bg-green-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                                        Record and manage job applicants + existing employees
-                                    </li>
-                                    <li class="flex items-center bg-purple-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                                        Search and Filter
-                                    </li>
-                                    <li class="flex items-center bg-orange-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                                        Admin Exclusive Permissions
-                                    </li>
-                                    <li class="flex items-center bg-cyan-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                                        Visualize database stats
-                                    </li>
-                                </ul>
-                            </div>
                             
-                            <!-- Project Demo GIF/Image Frame -->
-                            <div class="mb-6">
-                                <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-blue-400 transition-colors">
-                                    <img src="./static/img/NHSAPP.gif" 
-                                         alt="Digital Health Wales Project Demo" 
-                                         class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
-                                         onclick="window.open('https://github.com/ben-hockley/Client-Project-Y2', '_blank')">
-                                    <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                            <div class="project-details">
+                                <div class="mb-4">
+                                    <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SpringBoot</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Spring Security</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Gradle</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Bootstrap</span>
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Chart.js</span>
+                                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">SQL</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 mb-6 leading-relaxed text-lg">
+                                    Employee/Candidate management System for Digital Health and Care Wales, Developed
+                                    during a 4 week group client project at the National Software Academy, Cardiff University 
+                                    in collaboration with Akshay Karsan, Tiago Moico and Saif Abuzinada
+                                </p>
+                                <div class="mb-6">
+                                    <p class="font-bold text-gray-800 mb-3 text-lg">Key Features:</p>
+                                    <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                                        <li class="flex items-center bg-blue-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                                            User registration and authentication
+                                        </li>
+                                        <li class="flex items-center bg-green-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                            Record and manage job applicants + existing employees
+                                        </li>
+                                        <li class="flex items-center bg-purple-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                                            Search and Filter
+                                        </li>
+                                        <li class="flex items-center bg-orange-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                                            Admin Exclusive Permissions
+                                        </li>
+                                        <li class="flex items-center bg-cyan-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                            Visualize database stats
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Project Demo GIF/Image Frame -->
+                                <div class="mb-6">
+                                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-blue-400 transition-colors">
+                                        <img src="./static/img/NHSAPP.gif" 
+                                             alt="Digital Health Wales Project Demo" 
+                                             class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                                             onclick="window.open('https://github.com/ben-hockley/Client-Project-Y2', '_blank')">
+                                        <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="group relative bg-gradient-to-br from-white to-orange-50 border-2 border-orange-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-orange-300 overflow-hidden">
+                    <article class="group project-panel relative bg-gradient-to-br from-white to-orange-50 border-2 border-orange-200 rounded-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-orange-300 overflow-hidden cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-br from-orange-400/5 to-red-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="relative z-10">
+                        <div class="relative z-10 project-content">
                             <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                                 <span class="mr-3 text-3xl animate-float">☂️</span> 
                                 <span class="bg-gradient-to-r from-orange-700 to-red-700 bg-clip-text text-transparent">
                                     Client Project For Legal and General
                                 </span>
                             </h4>
-                            <div class="mb-4">
-                                <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Flask</span>
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JQuery</span>
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">SQLite</span>
+                            
+                            <div class="project-details">
+                                <div class="mb-4">
+                                    <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Flask</span>
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JQuery</span>
+                                        <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">SQLite</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-gray-700 mb-6 leading-relaxed text-lg">
-                                Employee Engagement app designed for employees at Legal and General to promote communication
-                                and improve morale. Developed during a 4 week Client Project at the National Software Academy, Cardiff
-                                in collaboration with Freddie McKay, Alex Stephens and Sam Carter.
-                            </p>
-                            <!-- Project Demo GIF/Image Frame -->
-                            <div class="mb-6">
-                                <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-orange-400 transition-colors">
-                                    <img src="./static/img/L&G.gif" 
-                                         alt="Legal And General Demo" 
-                                         class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
-                                         onclick="window.open('https://github.com/ben-hockley/Client-Project-Y1', '_blank')">
-                                    <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                                <p class="text-gray-700 mb-6 leading-relaxed text-lg">
+                                    Employee Engagement app designed for employees at Legal and General to promote communication
+                                    and improve morale. Developed during a 4 week Client Project at the National Software Academy, Cardiff
+                                    in collaboration with Freddie McKay, Alex Stephens and Sam Carter.
+                                </p>
+                                <!-- Project Demo GIF/Image Frame -->
+                                <div class="mb-6">
+                                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-orange-400 transition-colors">
+                                        <img src="./static/img/L&G.gif" 
+                                             alt="Legal And General Demo" 
+                                             class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                                             onclick="window.open('https://github.com/ben-hockley/Client-Project-Y1', '_blank')">
+                                        <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="group relative bg-gradient-to-br from-white to-green-50 border-2 border-green-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-green-300 overflow-hidden">
+                    <article class="group project-panel relative bg-gradient-to-br from-white to-green-50 border-2 border-green-200 rounded-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-green-300 overflow-hidden cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-br from-green-400/5 to-emerald-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="relative z-10">
+                        <div class="relative z-10 project-content">
                             <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                                 <span class="mr-3 text-3xl animate-float">🏈</span> 
                                 <span class="bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent">
                                     Online American Football Sim
                                 </span>
                             </h4>
-                            <div class="mb-4">
-                                <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">FastAPI</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SQL</span>
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</span>
+                            
+                            <div class="project-details">
+                                <div class="mb-4">
+                                    <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Technologies:</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">FastAPI</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SQL</span>
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-gray-700 mb-6 leading-relaxed text-lg">
-                                Browser-based American Football manager simulator, where users can compete against each other online.
-                                Users can create teams, manage players, and compete in matches. Developed as a personal project.
-                            </p>
-                            <div class="mb-6">
-                                <p class="font-bold text-gray-800 mb-3 text-lg">Key Features:</p>
-                                <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
-                                    <li class="flex items-center bg-blue-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                                        Advanced Python Logic
-                                    </li>
-                                    <li class="flex items-center bg-green-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                                        Live Web Sockets
-                                    </li>
-                                    <li class="flex items-center bg-purple-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                                        Large Database Management
-                                    </li>
-                                    <li class="flex items-center bg-orange-50 rounded-lg p-2">
-                                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                                        Avatar Generation
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6">
-                                <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-green-400 transition-colors">
-                                    <img src="./static/img/AF.gif" 
-                                         alt="American Football Sim Demo" 
-                                         class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
-                                         onclick="window.open('https://github.com/ben-hockley/power-league', '_blank')">
-                                    <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                                <p class="text-gray-700 mb-6 leading-relaxed text-lg">
+                                    Browser-based American Football manager simulator, where users can compete against each other online.
+                                    Users can create teams, manage players, and compete in matches. Developed as a personal project.
+                                </p>
+                                <div class="mb-6">
+                                    <p class="font-bold text-gray-800 mb-3 text-lg">Key Features:</p>
+                                    <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                                        <li class="flex items-center bg-blue-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                                            Advanced Python Logic
+                                        </li>
+                                        <li class="flex items-center bg-green-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                            Live Web Sockets
+                                        </li>
+                                        <li class="flex items-center bg-purple-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                                            Large Database Management
+                                        </li>
+                                        <li class="flex items-center bg-orange-50 rounded-lg p-2">
+                                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                                            Avatar Generation
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6">
+                                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center hover:border-green-400 transition-colors">
+                                        <img src="./static/img/AF.gif" 
+                                             alt="American Football Sim Demo" 
+                                             class="mx-auto rounded-xl shadow-lg max-w-full h-auto hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                                             onclick="window.open('https://github.com/ben-hockley/power-league', '_blank')">
+                                        <p class="text-sm text-gray-500 mt-3 font-medium">Click to view project repository</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -571,121 +527,6 @@
         </div>
     </footer>
 
-    <script>
-        // Enhanced Navigation Bar with Scroll and Hover Effects
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.getElementById('navbar');
-            let isScrolled = false;
-            let scrollTimeout;
-
-            // Handle scroll events
-            function handleScroll() {
-                const scrollY = window.scrollY;
-                
-                // Clear existing timeout
-                clearTimeout(scrollTimeout);
-                
-                if (scrollY > 100 && !isScrolled) {
-                    // Scrolled down - collapse navbar
-                    navbar.classList.add('nav-collapsed');
-                    navbar.classList.remove('nav-expanded');
-                    isScrolled = true;
-                } else if (scrollY <= 100 && isScrolled) {
-                    // Scrolled back to top - expand navbar
-                    navbar.classList.add('nav-expanded');
-                    navbar.classList.remove('nav-collapsed');
-                    isScrolled = false;
-                }
-            }
-
-            // Handle mouse enter on navbar
-            function handleMouseEnter() {
-                if (isScrolled) {
-                    navbar.classList.add('nav-hover');
-                }
-            }
-
-            // Handle mouse leave on navbar
-            function handleMouseLeave() {
-                if (isScrolled) {
-                    navbar.classList.remove('nav-hover');
-                }
-            }
-
-            // Throttled scroll event listener
-            let scrollThrottle = false;
-            window.addEventListener('scroll', function() {
-                if (!scrollThrottle) {
-                    requestAnimationFrame(function() {
-                        handleScroll();
-                        scrollThrottle = false;
-                    });
-                    scrollThrottle = true;
-                }
-            });
-
-            // Mouse event listeners for navbar
-            navbar.addEventListener('mouseenter', handleMouseEnter);
-            navbar.addEventListener('mouseleave', handleMouseLeave);
-
-            // Smooth scrolling for anchor links
-            const anchorLinks = document.querySelectorAll('a[href^="#"]');
-            anchorLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 100; // Account for navbar height
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Initialize navbar state
-            navbar.classList.add('nav-expanded');
-        });
-
-        // Google Maps initialization
-        let map;
-        async function initMap() {
-            const { Map } = await google.maps.importLibrary("maps");
-            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-            // London coordinates
-            const position = { lat: 51.5074, lng: -0.1278 };
-
-            map = new Map(document.getElementById("map"), {
-                zoom: 10,
-                center: position,
-                mapId: "DEMO_MAP_ID",
-                styles: [
-                    {
-                        "featureType": "all",
-                        "elementType": "geometry.fill",
-                        "stylers": [{"color": "#1f2937"}]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [{"color": "#3b82f6"}]
-                    }
-                ]
-            });
-
-            const marker = new AdvancedMarkerElement({
-                map: map,
-                position: position,
-                title: "London"
-            });
-        }
-
-        // Initialize map when the page loads
-        window.initMap = initMap;
-    </script>
+    <script src="static/JS/dynamic.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+/* Smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation bar transition styles */
+        .nav-collapsed {
+            opacity: 0.4;
+            padding: 0.75rem 0 !important;
+        }
+
+        .nav-expanded {
+            opacity: 1;
+            padding: 1.25rem 0 !important;
+        }
+
+        .nav-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Enhanced hover effect for navigation */
+        .nav-hover {
+            opacity: 1 !important;
+            padding: 1.25rem 0 !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        /* Project panel hover effects */
+        .project-panel {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .project-content {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-panel:not(:hover) .project-details {
+            opacity: 0;
+            max-height: 0;
+            margin: 0;
+            padding: 0;
+            transform: translateY(-20px);
+        }
+
+        .project-panel:hover .project-details {
+            opacity: 1;
+            max-height: 2000px;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            transform: translateY(0);
+        }
+
+        .project-panel:not(:hover) {
+            padding: 1.5rem 2rem !important;
+        }
+
+        .project-panel:hover {
+            padding: 2rem !important;
+        }
