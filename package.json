@@ -1,0 +1,18 @@
+{
+  "name": "ben-hockley-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Ben Hockley",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./static/CSS/tailwind.css --watch",
+    "build-css-prod": "tailwindcss -i ./src/input.css -o ./static/CSS/tailwind.css --minify",
+    "build": "npm run build-css-prod",
+    "deploy": "npm run build && echo 'Ready for GitHub Pages deployment!'"
+  },
+  "keywords": ["portfolio", "tailwindcss", "html", "css"],
+  "author": "Ben Hockley",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
